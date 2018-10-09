@@ -25,7 +25,8 @@ SET first_name=subquery.first_name,
 FROM (SELECT customer_id, first_name, last_name, ... FROM temp_table) AS subquery
 WHERE customer.id=subquery.customer_id;
 ```
-    - Create customers from temp table where customer id is not
+-
+    - Create customers from temp table where customer id is not in the temp table
 ```
 INSERT INTO customer (
     SELECT customer_id, first_name, last_name, ...
